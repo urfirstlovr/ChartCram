@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular System | ChartCram</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #f7f8f6;
+            color: #20364a;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #dce4e7;
+            padding: 22px 8%;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #183b56;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #478b88;
+        }
+
+        .hero {
+            background: #edf3f2;
+            padding: 65px 8%;
+        }
+
+        .eyebrow {
+            font-family: Arial, sans-serif;
+            color: #478b88;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 45px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-family: Arial, sans-serif;
+            color: #607487;
+            max-width: 650px;
+            line-height: 1.8;
+        }
+
+        .content {
+            padding: 55px 8%;
+        }
+
+        .content h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            font-family: Arial, sans-serif;
+            color: #607487;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .level-card {
+            background: white;
+            border: 1px solid #dce4e7;
+            padding: 25px;
+            border-radius: 5px;
+        }
+
+        .level-card a {
+            color: #478b88;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .level-card h3 {
+            margin: 12px 0;
+            font-size: 21px;
+        }
+
+        .level-card p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #607487;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .lesson {
+            padding: 45px 8%;
+            border-top: 1px solid #dce4e7;
+        }
+
+        .lesson h2 {
+            font-size: 29px;
+            margin-bottom: 18px;
+        }
+
+        .lesson h3 {
+            font-size: 21px;
+            margin: 25px 0 10px;
+        }
+
+        .lesson p, .lesson li {
+            font-family: Arial, sans-serif;
+            color: #53697c;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .lesson ul {
+            padding-left: 23px;
+            margin-top: 12px;
+        }
+
+        .info-box {
+            background: white;
+            border-left: 4px solid #478b88;
+            padding: 22px;
+            margin-top: 25px;
+        }
+
+        .quiz {
+            background: #edf3f2;
+            padding: 35px;
+            margin: 40px 8%;
+            border-radius: 5px;
+        }
+
+        .quiz h2 {
+            margin-bottom: 15px;
+        }
+
+        .quiz p {
+            font-family: Arial, sans-serif;
+            margin-bottom: 15px;
+        }
+
+        .quiz button {
+            display: block;
+            width: 100%;
+            max-width: 450px;
+            padding: 13px;
+            margin: 9px 0;
+            border: 1px solid #cbd8da;
+            background: white;
+            color: #20364a;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .quiz button:hover {
+            border-color: #478b88;
+        }
+
+        #feedback {
+            margin-top: 18px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 750px) {
+            .level-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+        }
+
+        .blood-flow {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+            max-width: 850px;
+        }
+
+        .flow-side {
+            background: white;
+            border: 1px solid #dce4e7;
+            border-radius: 6px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .flow-side h4 {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin-bottom: 22px;
+            color: #20364a;
+        }
+
+        .flow-step {
+            padding: 13px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            background: #edf3f2;
+            border: 1px solid #dce4e7;
+        }
+
+        .flow-side:first-child .flow-step {
+            border-left: 4px solid #3977b9;
+        }
+
+        .flow-side:last-child .flow-step {
+            border-left: 4px solid #bd5148;
+        }
+
+        .flow-arrow {
+            font-size: 22px;
+            color: #478b88;
+            padding: 5px;
+        }
+
+        @media (max-width: 650px) {
+            .blood-flow {
+                grid-template-columns: 1fr;
+            }
+        }
+.heart-figure {
+    margin: 30px 0;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #dce5e8;
+    border-radius: 8px;
+}
+
+.heart-figure img {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.heart-figure figcaption {
+    margin-top: 14px;
+    color: #607487;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
+.blood-flow-activity {
+    margin: 35px 0;
+    padding: 25px;
+    background: #f2f7f7;
+    border: 1px solid #d5e3e4;
+    border-radius: 8px;
+}
+
+.blood-flow-activity h3 {
+    color: #17324d;
+}
+
+#flow-step {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 6px;
+    color: #17324d;
+    font-weight: bold;
+}
+
+#flow-button {
+    padding: 12px 22px;
+    background: #285f68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#flow-button:hover {
+    background: #1d4850;
+}
+.knowledge-check {
+    margin: 30px 0;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #dce5e8;
+    border-left: 4px solid #285f68;
+    border-radius: 8px;
+}
+
+.knowledge-check h3 {
+    color: #17324d;
+}
+
+.knowledge-check button {
+    margin: 6px 6px 6px 0;
+    padding: 11px 18px;
+    background: #285f68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.knowledge-check button:hover {
+    background: #1d4850;
+}
+
+#quiz-feedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">Chart<span>Cram</span></a>
+</header>
+
+<main>
+
+    <section class="hero">
+        <p class="eyebrow">ANATOMY & PHYSIOLOGY · BODY SYSTEM 01</p>
+        <h1>Cardiovascular System</h1>
+        <p>
+            Explore the heart, blood vessels, and circulation.
+            Understand how the cardiovascular system transports
+            blood throughout the human body.
+        </p>
+    </section>
+
+    <section class="content">
+        <h2>Learning pathways</h2>
+        <p class="intro">
+            Choose a difficulty level. Each level builds on
+            the knowledge from the previous one.
+        </p>
+
+        <div class="level-grid">
+
+            <div class="level-card">
+                <p class="eyebrow">LEVEL 01</p>
+                <h3>Beginner</h3>
+                <p>
+                    Learn the basic structures of the heart,
+                    blood vessels, and circulation.
+                </p>
+                <a href="#beginner">Explore beginner lessons →</a>
+            </div>
+
+            <div class="level-card">
+                <p class="eyebrow">LEVEL 02</p>
+                <h3>Intermediate</h3>
+                <p>
+                    Study cardiac function, electrical conduction,
+                    and blood pressure concepts.
+                </p>
+                <a href="#intermediate">Explore intermediate lessons →</a>
+            </div>
+
+            <div class="level-card">
+                <p class="eyebrow">LEVEL 03</p>
+                <h3>Advanced</h3>
+                <p>
+                    Explore cardiac physiology, regulation,
+                    and complex cardiovascular concepts.
+                </p>
+                <a href="#advanced">Explore advanced lessons →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="lesson" id="beginner">
+        <p class="eyebrow">LEVEL 01 · BEGINNER</p>
+        <h2>Introduction to the Heart</h2>
+
+        <p>
+            The heart is a muscular organ located in the thoracic
+            cavity. Its primary function is to pump blood through
+            the pulmonary and systemic circulations.
+        </p>
+<figure class="heart-figure">
+    <img
+        src="heart-anatomy.png"
+        alt="Anatomical diagram showing the internal structures of the human heart"
+    >
+    <figcaption>
+        Figure 19.9 — Internal Structures of the Heart.
+        Source: OpenStax, Anatomy & Physiology 2e.
+        Licensed under CC BY-NC-SA 4.0.
+    <figcaption>
+    Figure 19.9 — Internal Structures of the Heart.
+    Source: OpenStax, Anatomy & Physiology 2e.
+    <a href="https://openstax.org/books/anatomy-and-physiology-2e/pages/19-1-heart-anatomy"
+       target="_blank">
+        View original source
+    </a>
+    |
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+       target="_blank">
+        CC BY-NC-SA 4.0 License
+    </a>
+</figcaption>
+</figure>
+        <h3>The four chambers</h3>
+
+        <p>
+            The heart contains four chambers. The two atria
+            receive blood, while the two ventricles pump blood
+            out of the heart.
+        </p>
+
+        <ul>
+            <li><strong>Right atrium:</strong> Receives blood returning from the body.</li>
+            <li><strong>Right ventricle:</strong> Pumps blood toward the lungs.</li>
+            <li><strong>Left atrium:</strong> Receives blood returning from the lungs.</li>
+            <li><strong>Left ventricle:</strong> Pumps blood into systemic circulation.</li>
+        </ul>
+
+        <div class="info-box">
+            <strong>Key concept:</strong>
+            The right side of the heart sends blood to the lungs.
+            The left side sends blood to the rest of the body.
+        </div>
+
+        <h3>Blood Flow Through the Heart</h3>
+
+        <p>
+            Blood travels through the heart in a continuous cycle.
+            Follow the pathway below to understand how circulation works.
+        </p>
+
+        <div class="blood-flow">
+
+           
+<div class="flow-side">
+    <h4>Right Side · Deoxygenated Blood</h4>
+    <div class="flow-step">Body</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Superior & Inferior Vena Cava</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Right Atrium</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Tricuspid Valve</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Right Ventricle</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Pulmonary Valve</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Pulmonary Arteries</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Lungs</div>
+</div>
+
+<div class="flow-side">
+    <h4>Left Side · Oxygenated Blood</h4>
+    <div class="flow-step">Lungs</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Pulmonary Veins</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Left Atrium</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Mitral Valve</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Left Ventricle</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Aortic Valve</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Aorta</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-step">Body</div>
+</div>
+
+            </div>
+
+        </div>
+
+        <div class="info-box">
+            <h3>Why does the heart have valves?</h3>
+
+            <p>
+                Heart valves help maintain one-way blood flow
+                through the heart. They open to allow blood
+                to move forward and close to help prevent
+                backward flow.
+            </p>
+
+            <ul>
+                <li><strong>Tricuspid valve:</strong> Between the right atrium and right ventricle.</li>
+                <li><strong>Pulmonary valve:</strong> Between the right ventricle and pulmonary trunk.</li>
+                <li><strong>Mitral valve:</strong> Between the left atrium and left ventricle.</li>
+                <li><strong>Aortic valve:</strong> Between the left ventricle and aorta.</li>
+            </ul>
+        </div>
+
+        <h3>Blood vessels</h3>
+
+        <ul>
+            <li><strong>Arteries:</strong> Carry blood away from the heart.</li>
+            <li><strong>Veins:</strong> Carry blood toward the heart.</li>
+            <li><strong>Capillaries:</strong> Allow exchange of gases, nutrients, and waste between blood and tissues.</li>
+        </ul>
+        <div class="blood-flow-activity">
+    <h3>Interactive Blood Flow Challenge</h3>
+
+    <p>
+        Follow the path blood takes through the heart.
+        Click the button to reveal each next step.
+    </p>
+
+    <div id="flow-step">
+        Start with blood returning from the body.
+    </div>
+
+    <button onclick="nextFlowStep()" id="flow-button">
+        Start the challenge
+    </button>
+
+</div>
+<div class="knowledge-check">
+    <h3>Knowledge Check</h3>
+    <p>Test what you've learned about blood flow!</p>
+
+    <p><strong>Question 1:</strong> Which chamber pumps blood to the lungs?</p>
+
+    <button onclick="checkAnswer('right')">Right ventricle</button>
+    <button onclick="checkAnswer('left')">Left ventricle</button>
+
+    <p id="quiz-feedback"></p>
+    <p><strong>Question 2:</strong> Which blood vessels carry oxygen-rich blood from the lungs to the heart?</p>
+
+<button onclick="checkSecondAnswer('veins')">Pulmonary veins</button>
+<button onclick="checkSecondAnswer('arteries')">Pulmonary arteries</button>
+
+<p id="second-quiz-feedback"></p>
+
+</div>
+    </section>
+
+    <section class="lesson" id="intermediate">
+        <p class="eyebrow">LEVEL 02 · INTERMEDIATE</p>
+        <h2>Cardiac Function</h2>
+
+        <h3>The cardiac cycle</h3>
+        <p>
+            The cardiac cycle describes the events that occur
+            during one complete heartbeat. It includes
+            ventricular contraction (systole) and relaxation
+            (diastole).
+        </p>
+
+        <h3>Electrical conduction</h3>
+        <p>
+            Specialized cardiac cells generate and conduct
+            electrical signals that coordinate the heartbeat.
+            The sinoatrial node normally initiates each heartbeat.
+        </p>
+
+        <ul>
+            <li>Sinoatrial (SA) node</li>
+            <li>Atrioventricular (AV) node</li>
+            <li>Bundle of His</li>
+            <li>Right and left bundle branches</li>
+            <li>Purkinje fibers</li>
+        </ul>
+    </section>
+
+    <section class="lesson" id="advanced">
+        <p class="eyebrow">LEVEL 03 · ADVANCED</p>
+        <h2>Advanced Cardiovascular Physiology</h2>
+
+        <h3>Cardiac output</h3>
+        <p>
+            Cardiac output is the volume of blood pumped by
+            one ventricle per minute.
+        </p>
+
+        <div class="info-box">
+            <strong>Formula:</strong>
+            Cardiac output = Heart rate × Stroke volume
+        </div>
+
+        <h3>Regulation of blood pressure</h3>
+        <p>
+            Blood pressure is influenced by cardiac output,
+            vascular resistance, blood volume, and regulatory
+            mechanisms involving the nervous and endocrine systems.
+        </p>
+    </section>
+
+    <section class="quiz">
+        <p class="eyebrow">KNOWLEDGE CHECK</p>
+        <h2>Test your knowledge</h2>
+
+        <p>Which chamber pumps blood to the lungs?</p>
+
+        <button onclick="checkAnswer(this, false)">A. Left atrium</button>
+        <button onclick="checkAnswer(this, true)">B. Right ventricle</button>
+        <button onclick="checkAnswer(this, false)">C. Left ventricle</button>
+        <button onclick="checkAnswer(this, false)">D. Right atrium</button>
+
+        <p id="feedback"></p>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid #dce4e7;">
+
+        <p>Which blood vessels carry blood away from the heart?</p>
+
+        <button onclick="checkSecondAnswer(this, false)">A. Veins</button>
+        <button onclick="checkSecondAnswer(this, true)">B. Arteries</button>
+        <button onclick="checkSecondAnswer(this, false)">C. Capillaries</button>
+        <button onclick="checkSecondAnswer(this, false)">D. Venules</button>
+
+        <p id="secondFeedback"></p>
+
+    </section>
+
+</main>
+
+<script>
+    function checkAnswer(button, correct) {
+        const feedback = document.getElementById("feedback");
+
+        if (correct) {
+            feedback.textContent = "Correct! The right ventricle pumps blood toward the lungs.";
+            feedback.style.color = "#28765c";
+        } else {
+            feedback.textContent = "Not quite. Review the four heart chambers and try again!";
+            feedback.style.color = "#a34c42";
+        }
+    }
+
+    function checkSecondAnswer(button, correct) {
+        const feedback = document.getElementById("secondFeedback");
+
+        if (correct) {
+            feedback.textContent = "Correct! Arteries carry blood away from the heart.";
+            feedback.style.color = "#28765c";
+        } else {
+            feedback.textContent = "Not quite. Remember: arteries carry blood away from the heart!";
+            feedback.style.color = "#a34c42";
+        }
+    }
+const bloodFlowSteps = [
+    "1. Body — Blood returns from the body carrying less oxygen.",
+    "2. Superior and inferior vena cava — Blood enters the heart.",
+    "3. Right atrium — Blood enters the upper right chamber.",
+    "4. Tricuspid valve — Blood passes into the right ventricle.",
+    "5. Right ventricle — Blood is pumped toward the lungs.",
+    "6. Pulmonary valve — Blood passes into the pulmonary trunk.",
+    "7. Pulmonary arteries — Blood travels to the lungs.",
+    "8. Lungs — Blood picks up oxygen.",
+    "9. Pulmonary veins — Blood returns to the heart.",
+    "10. Left atrium — Blood enters the upper left chamber.",
+    "11. Mitral valve — Blood passes into the left ventricle.",
+    "12. Left ventricle — Blood is pumped toward the body.",
+    "13. Aortic valve and aorta — Blood leaves the heart and travels to the body!"
+];
+
+let currentFlowStep = -1;
+
+function nextFlowStep() {
+    currentFlowStep++;
+
+    document.getElementById("flow-step").textContent =
+        bloodFlowSteps[currentFlowStep];
+
+    const button = document.getElementById("flow-button");
+
+    if (currentFlowStep === bloodFlowSteps.length - 1) {
+        button.textContent = "Restart challenge";
+        button.onclick = restartFlow;
+    } else {
+        button.textContent = "Next step";
+    }
+}
+
+function restartFlow() {
+    currentFlowStep = -1;
+    document.getElementById("flow-step").textContent =
+        "Start with blood returning from the body.";
+    document.getElementById("flow-button").textContent =
+        "Start the challenge";
+    document.getElementById("flow-button").onclick = nextFlowStep;
+}
+function checkAnswer(answer) {
+    const feedback = document.getElementById("quiz-feedback");
+
+    if (answer === "right") {
+        feedback.textContent = "Correct! The right ventricle pumps blood toward the lungs.";
+        feedback.style.color = "#26734d";
+    } else {
+        feedback.textContent = "Not quite! The left ventricle pumps blood to the body.";
+        feedback.style.color = "#b54747";
+    }
+}
+function checkSecondAnswer(answer) {
+    const feedback = document.getElementById("second-quiz-feedback");
+
+    if (answer === "veins") {
+        feedback.textContent = "Correct! Pulmonary veins carry oxygen-rich blood from the lungs to the left atrium.";
+        feedback.style.color = "#26734d";
+    } else {
+        feedback.textContent = "Not quite! Pulmonary arteries carry blood from the heart to the lungs.";
+        feedback.style.color = "#b54747";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChartCram | Medical Education</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #f7f8f6;
+        color: #20364a;
+    }
+
+    header {
+        background-color: #ffffff;
+        border-bottom: 1px solid #dce4e7;
+        padding: 22px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 27px;
+        font-weight: bold;
+        color: #183b56;
+        letter-spacing: -1px;
+    }
+
+    .logo span {
+        color: #478b88;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #40566a;
+        margin-left: 28px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #478b88;
+    }
+
+    .hero {
+        padding: 100px 8%;
+        background-color: #edf3f2;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        max-width: 650px;
+        line-height: 1.15;
+        margin-bottom: 22px;
+    }
+
+    .hero p {
+        font-family: Arial, sans-serif;
+        color: #607487;
+        font-size: 17px;
+        line-height: 1.7;
+        max-width: 560px;
+    }
+
+    .courses-section {
+        padding: 75px 8%;
+        background-color: #f7f8f6;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .eyebrow {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #478b88;
+        margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+        margin-bottom: 12px;
+    }
+
+    .section-heading > p:last-child {
+        font-family: Arial, sans-serif;
+        color: #607487;
+        font-size: 15px;
+    }
+
+    .course-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .course-card {
+        background-color: #ffffff;
+        border: 1px solid #dce4e7;
+        border-radius: 5px;
+        padding: 30px;
+        transition: border-color 0.2s;
+    }
+
+    .course-card:hover {
+        border-color: #478b88;
+    }
+
+    .course-number {
+        font-family: Arial, sans-serif;
+        color: #478b88;
+        font-size: 13px;
+        margin-bottom: 22px;
+    }
+
+    .course-card h3 {
+        font-size: 23px;
+        margin-bottom: 12px;
+    }
+
+    .course-card > p:not(.course-number) {
+        font-family: Arial, sans-serif;
+        color: #607487;
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .course-card span {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #478b88;
+        font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+        .course-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+        nav a {
+            margin-left: 10px;
+        }
+    }
+    .course-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Chart<span>Cram</span></div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Build your understanding of medicine.</h1>
+
+            <p>
+                Explore medical science through structured lessons,
+                visual learning, and interactive knowledge checks.
+                Learn at your own pace, from foundational concepts
+                to advanced topics.
+            </p>
+        </section>
+
+        
+        <section class="courses-section">
+            <div class="section-heading">
+                <p class="eyebrow">EXPLORE MEDICAL SCIENCE</p>
+                <h2>Explore our courses</h2>
+                <p>Build your knowledge one subject at a time.</p>
+            </div>
+
+            <div class="course-grid">
+
+                <a href="anatomy.html" class="course-card">
+    <p class="course-number">01</p>
+    <h3>Anatomy & Physiology</h3>
+    <p>Explore the structures of the human body and how its systems function.</p>
+    <span>Beginner to Advanced →</span>
+</a>
+
+                <div class="course-card">
+                    <p class="course-number">02</p>
+                    <h3>Medical Terminology</h3>
+                    <p>Learn the language used throughout healthcare and medical science.</p>
+                    <span>Beginner to Advanced</span>
+                </div>
+
+                <div class="course-card">
+                    <p class="course-number">03</p>
+                    <h3>Diseases & Conditions</h3>
+                    <p>Study disease processes, signs, symptoms, and medical concepts.</p>
+                    <span>Beginner to Advanced</span>
+                </div>
+
+                <div class="course-card">
+                    <p class="course-number">04</p>
+                    <h3>Laboratory Science</h3>
+                    <p>Understand common laboratory tests, specimens, and results.</p>
+                    <span>Beginner to Advanced</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
